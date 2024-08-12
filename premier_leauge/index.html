@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Premier League Clubs</title>
+        <link rel="icon" href="images/premier_league_logo.png">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #334;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+            background: url('images/premier_league_logo_transparent.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background for better readability */
+            border-radius: 10px;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .title-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .title-logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #bada55;
+            margin: 10px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .club-table {
+            width: 100%;
+            background-color: #446;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        .club-table .club {
+            border: 1px solid #555;
+        }
+
+        .club-table .club td {
+            padding: 20px;
+            vertical-align: top;
+            transition: transform 0.3s ease;
+        }
+
+        .club img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .club:hover img {
+            transform: scale(1.1);
+        }
+
+        .club p {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .club-table .club td {
+                display: block;
+                width: 100%;
+            }
+
+            .club img {
+                margin: 0 auto 20px;
+                display: block;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title-logo">
+                <img src="images/premier_league_logo.png"
+                    alt="Premier League Logo">
+            </div>
+            <h1>Premier League</h1>
+            <p>The top level of the English football league system. Contested by
+                20 clubs:</p>
+            <table class="club-table">
+                <tr class="club">
+                    <td><a href="https://www.manutd.com" target="_blank"><img
+                                src="images/manutd.png"
+                                alt="Manchester United Logo"></a></td>
+                    <td><p><strong>Manchester United Football Club</strong>,
+                            commonly referred to as Man United, is a
+                            professional football club based in the Old Trafford
+                            area of Manchester, England. The club competes in
+                            the Premier League. Nicknamed the Red Devils,
+                            Manchester United have won a record 20 League
+                            titles.</p></td>
+                </tr>
+                <tr class="club">
+                    <td><a href="https://www.liverpoolfc.com"
+                            target="_blank"><img src="images/liverpool.png"
+                                alt="Liverpool Logo"></a></td>
+                    <td><p><strong>Liverpool Football Club</strong> is a
+                            professional football club based in Liverpool,
+                            England. The club competes in the Premier League.
+                            Founded in 1892, the club joined the Football League
+                            the following year and has played its home games at
+                            Anfield since its formation. The club has won
+                            nineteen League titles.</p></td>
+                </tr>
+                <tr class="club">
+                    <td><a href="https://www.arsenal.com" target="_blank"><img
+                                src="images/arsenal.png"
+                                alt="Arsenal Logo"></a></td>
+                    <td><p><strong>Arsenal Football Club</strong> (also simply
+                            known as Arsenal) is a professional football club
+                            based in Islington, London, England. Arsenal plays
+                            in the Premier League, the top flight of English
+                            football. The club has won 13 league titles
+                            (including one unbeaten title).</p></td>
+                </tr>
+                <tr class="club">
+                    <td><a href="https://www.chelseafc.com" target="_blank"><img
+                                src="images/chelsea.png"
+                                alt="Chelsea Logo"></a></td>
+                    <td><p><strong>Chelsea Football Club</strong> is an English
+                            professional football club based in Fulham, in the
+                            western part of London. Founded in 1905, they play
+                            their home games at Stamford Bridge. The club has
+                            won six league titles.</p></td>
+                </tr>
+                <tr class="club">
+                    <td><a href="https://www.mancity.com" target="_blank"><img
+                                src="images/mancity.png"
+                                alt="Manchester City Logo"></a></td>
+                    <td><p><strong>Manchester City Football Club</strong> is an
+                            English football club based in Manchester that
+                            competes in the Premier League. The club's home
+                            ground is the Etihad Stadium in east Manchester.
+                            Having won eight League titles.</p></td>
+                </tr>
+                <tr class="club">
+                    <td><a href="https://www.avfc.co.uk" target="_blank"><img
+                                src="images/astonvilla.png"
+                                alt="Aston Villa Logo"></a></td>
+                    <td><p><strong>Aston Villa Football Club</strong> is a
+                            professional football club based in Aston,
+                            Birmingham, England. The club competes in the
+                            Premier League, the top tier of the English football
+                            league system. Founded in 1874, they have played at
+                            their home ground, Villa Park, since 1897. Aston
+                            Villa are one of the oldest and most successful
+                            clubs in England.</p></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.container').classList.add('visible');
+        });
+    </script>
+    </body>
+</html>
